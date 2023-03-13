@@ -1,8 +1,19 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 const pageTitle = "Chance Smith";
+const allPosts = await Astro.glob('../pages/**/*.md');
+// TODO: sort by date - Chance Smith 3/13/2023
+const threePosts = allPosts.slice(Math.max(allPosts.length - 5, 0))
 ---
 
 <BaseLayout pageTitle={pageTitle}>
-  <h2>My awesome blog subtitle</h2>
+  <h2>Less hectic, more impactful, on-time software</h2>
+
+  <div>
+    <h3>Latest Insights</h3>
+    <ul>
+      {threePosts.map((post) => <li><a href={post.url}>{post.frontmatter.title}</a></li>)}
+    </ul>
+    <a href="/insights">All Insights</a>
+  </div>
 </BaseLayout>

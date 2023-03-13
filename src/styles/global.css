@@ -20,8 +20,14 @@ h1 {
   font-size: 2.5rem;
 }
 /* nav styles */
+nav {
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+}
+
 .hamburger {
-  padding-right: 20px;
+  display: block;
   cursor: pointer;
 }
 
@@ -29,7 +35,7 @@ h1 {
   display: block;
   width: 40px;
   height: 5px;
-  margin-bottom: 10px;
+  margin-bottom: 7px;
   background-color: #ccc;
 }
 
@@ -37,7 +43,6 @@ h1 {
   width: 100%;
   top: 5rem;
   left: 48px;
-  background-color: #ccc;
   display: none;
   margin: 0;
 }
@@ -50,11 +55,18 @@ h1 {
   font-size: 1.2rem;
   font-weight: bold;
   text-transform: uppercase;
+  color: #444;
+  border: 2px solid transparent;
 }
 
 .nav-links a:hover,
 a:focus {
   background-color: #ccc;
+}
+
+.nav-links a.active {
+  border-left: 2px solid #6ada55;
+  border-bottom: 2px solid #6ada55;
 }
 
 .expanded {
@@ -63,10 +75,8 @@ a:focus {
 
 @media screen and (min-width: 636px) {
   .nav-links {
-    margin-left: 5em;
-    display: block;
-    position: static;
-    width: auto;
+    display: flex;
+    justify-content: center;
     background: none;
   }
 
