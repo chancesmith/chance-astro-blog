@@ -1,3 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&family=Oswald&family=Roboto+Mono&display=swap');
+
+:root {
+  --black: #333;
+
+  /* fonts */
+  --sans-serif: 'Oswald';
+  --serif: 'Merriweather';
+  --mono: 'Roboto Mono';
+}
+
 html {
   background-color: #f1f5f9;
   font-family: sans-serif;
@@ -6,19 +17,32 @@ html {
 body {
   margin: 0 auto;
   width: 100%;
-  max-width: 80ch;
+  max-width: 50ch;
   padding: 1rem;
   line-height: 1.5;
+  color: var(--black);
+  font-size: 25px;
+  font-weight: 400;
+  font-family: var(--serif), Times, serif;
+}
+
+code {
+  font-family: var(--mono), monospace;
 }
 
 * {
   box-sizing: border-box;
 }
 
-h1 {
-  margin: 1rem 0;
-  font-size: 2.5rem;
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--sans-serif), sans-serif;
 }
+
+h1 {
+  margin: 2.5rem 0 0 0;
+  font-size: 3rem;
+}
+
 /* nav styles */
 nav {
   display: flex;
@@ -88,4 +112,27 @@ a:focus {
   .hamburger {
     display: none;
   }
+}
+
+/* INSIGHTS */
+.post-list {
+  list-style: none;
+  padding: 0;
+  margin: 3rem 0 0 0;
+}
+
+.post-item {
+  /* display: flex;
+  justify-content: space-between; */
+  margin: 0 0 4rem 0;
+}
+
+.post-item__date {
+  margin: 0;
+  font-size: 1.6rem;
+}
+
+.post-item__title {
+  font-size: 2.2rem;
+  color: var(--black);
 }
