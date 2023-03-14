@@ -1,10 +1,14 @@
 ---
 const pathname = new URL(Astro.request.url).pathname;
 const currentPath = pathname.slice(1); // remove the first "/"
+
+const isHome = currentPath === "";
+const isAbout = currentPath === "about";
+const isInsights = currentPath === "insights" || (!isHome && !isAbout);
 ---
 
 <div class="nav-links">
-  <a href="/" class={currentPath === "" ? "active" : ""}>Home</a>
-  <a href="/about" class={currentPath === "about" ? "active" : ""}>About</a>
-  <a href="/insights" class={currentPath === "insights" ? "active" : ""}>Insights</a>
+  <a href="/" class={isHome ? "active" : ""}>Home</a>
+  <a href="/about" class={isAbout ? "active" : ""}>About</a>
+  <a href="/insights" class={isInsights ? "active" : ""}>Insights</a>
 </div>

@@ -1,4 +1,5 @@
 ---
+layout: ../../layouts/MarkdownPostLayout.astro
 title: "3 Month Goals"
 pubDate: 2023-03-08
 description: "Help your team set 3 month goals"

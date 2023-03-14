@@ -1,12 +1,11 @@
 ---
+layout: ../layouts/MarkdownPostLayout.astro
 title: "End-to-end API Testing With Postman"
 pubDate: 2022-11-13
 description: "Follow these steps to create API endpoint tests in Postman"
 author: "Chance Smith"
 tags: ["testing", "development"]
 ---
-
-# End-to-end API Testing With Postman
 
 ## First, why are we testing the API endpoints?
 
