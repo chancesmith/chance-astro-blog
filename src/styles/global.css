@@ -1,12 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Merriweather&family=Oswald&family=Roboto+Mono&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Merriweather&family=Oswald&family=Roboto+Mono&display=swap");
 
 :root {
   --black: #333;
+  --primary: #4665b7;
+  --primary-light: #aebff1;
 
   /* fonts */
-  --sans-serif: 'Oswald';
-  --serif: 'Merriweather';
-  --mono: 'Roboto Mono';
+  --sans-serif: "Oswald";
+  --serif: "Merriweather";
+  --mono: "Roboto Mono";
 }
 
 html {
@@ -34,13 +36,27 @@ code {
   box-sizing: border-box;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: var(--sans-serif), sans-serif;
 }
 
 h1 {
   margin: 2.5rem 0 0 0;
   font-size: 3rem;
+}
+
+a {
+  color: var(--primary);
+}
+
+a:visited {
+  color: var(--primary);
+  text-decoration-color: var(--primary-light);
 }
 
 /* nav styles */
@@ -80,21 +96,24 @@ nav {
   font-weight: bold;
   text-transform: uppercase;
   color: #444;
-  border: 2px solid transparent;
+  border-bottom: 4px solid transparent;
+  margin: 0 1rem;
 }
 
 .nav-links a:hover,
-a:focus {
-  background-color: #ccc;
-}
-
+a:focus,
 .nav-links a.active {
-  border-left: 2px solid #6ada55;
-  border-bottom: 2px solid #6ada55;
+  border-bottom: 4px solid var(--primary);
 }
 
 .expanded {
   display: unset;
+}
+
+.nav-chance {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
 }
 
 @media screen and (min-width: 636px) {
@@ -134,5 +153,4 @@ a:focus {
 
 .post-item__title {
   font-size: 2.2rem;
-  color: var(--black);
 }
